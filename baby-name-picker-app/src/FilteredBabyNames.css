@@ -1,0 +1,46 @@
+img {
+  width: 30px;
+}
+.gender-filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-filter button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+  border-radius: 8px;
+}
+
+.gender-filter button img {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(100%); /* Default: Gray when not active */
+}
+
+.gender-filter button.active img {
+  filter: none; /* Remove grayscale when active */
+}
+
+.gender-filter button.active {
+  padding: 5px;
+  transform: scale(1.1); /* Slightly increase size when active */
+}
+
+/* Specific active colors */
+.gender-filter button.active:nth-child(1) {
+  background-color: gray; /* Neutral color for "All" */
+}
+
+.gender-filter button.active:nth-child(2) {
+  background-color: lightblue; /* Blue for "Boys" */
+}
+
+.gender-filter button.active:nth-child(3) {
+  background-color: pink; /* Pink for "Girls" */
+}
